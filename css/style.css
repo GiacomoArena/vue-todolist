@@ -38,6 +38,7 @@ body{
 }
 .task-container{
   width: 75%;
+  max-width: 1100px;
   margin: 25px auto;
   padding: 20px;
   border-radius: 5px;

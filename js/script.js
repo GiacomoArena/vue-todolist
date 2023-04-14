@@ -23,7 +23,7 @@ createApp({
         }
       },
 
-      add(){
+      add(i){
         if (this.newTask.length >3) {
           const taskAdded = {
             text: this.newTask,
@@ -33,12 +33,11 @@ createApp({
           this.error = '';
           this.newTask = '';
         }else{
-          this.error = "Scrivi qualcosa di senso compito"
+          this.error = "Scrivi qualcosa di senso compiuto"
         }
       }
     },
 
     mounted(){
-      console.log("nuova task", this.newTask);
     }
 }).mount('#app')

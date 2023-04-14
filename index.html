@@ -35,7 +35,7 @@
         >
 
         <button
-        @click="add()" class="button">Aggiungi
+        @click="add(i)" class="button">Aggiungi
       </button>
         
       </div>
@@ -57,7 +57,7 @@
           @click="task.done = !task.done"
           >
 
-            <span :class="{'done' : task.done}">{{task.text}}</span>
+            <span :class="{'done' : task.done}">{{i+1+" ) "}}{{task.text}}</span>
             <i 
             class="fa-solid fa-trash"
             @click.stop="remove(i)"

@@ -51,11 +51,15 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
         }
       }
  ```  
- 
+ .
 
 - Aggiungo la funzione che al click del tasto ''enter'' sulla tastiera se ci si trova nell'area di input verrá aagiunto il testo ovvero la funzione add()  
 
  ```
  @keyup.enter="add()"  
 
+ ```
+ - Aggiungo alla lista ''tasks'' un indice numerico semplicemente richiamandomi l'indice +1 del ciclo v-for sullo ''span'' del  tag ''li''
+ ```
+ <span :class="{'done' : task.done}">{{i+1+" ) "}} {{task.text}}</span>
  ```
