@@ -3,13 +3,47 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(110, 34, 182);
+}
 .logo-container{
   display: flex;
   justify-content: center;
 }
 .logo{
-  background-color: black;
   width: 300px;
+  margin-top: 20px;
+}
 
+.input-area{
+  display: flex;
+  justify-content:center;
+  margin-top: 25px;
+}
+.input-area input{
+  width: 300px;
+  margin: 0 30px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0 ;
+}
+.button{
+  font-weight: 500;
+  padding: 5px;
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.task-container{
+  width: 75%;
+  margin: 25px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+}
+
+.empty-message{
+  text-align: center;
 }

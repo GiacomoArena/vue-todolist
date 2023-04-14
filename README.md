@@ -15,3 +15,4 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
 
 ## Procedimenti  
  - Creare la parte grafica utilizzando il css e mettere i vari elementi
+ - impostare il messaggio nel caso in cui non ci siano task 
