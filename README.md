@@ -51,3 +51,7 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
       }
 
  ```
+ - aggiungo la funzione che al click del tasto ''enter'' sulla tastiera se ci si trova nell'area di input verrá aagiunto il testo ovvero la funzione add()
+ ````
+ @keyup.enter="add()"
+ ```
