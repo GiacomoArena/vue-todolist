@@ -30,6 +30,9 @@
         <input type="text" placeholder="Cose da fare ?">
 
         <button class="button">Aggiungi</button>
+        
+        <span>{{error}}</span>
+        
       </div>
 
       <div class="task-container">
@@ -38,12 +41,19 @@
           Non hai nulla da fare al momento! 
         </h3>
 
-        <ul v-else >
+        <ul v-else class="lista-tasks">
 
-          <li v-for="(task,i) in tasks">
+          <li
+          v-for="(task,i) in tasks"
+          
+          @click="task.done = !task.done"
+          >
 
-            <span>{{task.text}}</span>
-            <i class="fa-solid fa-trash-can"></i>
+            <span :class="{'done' : task.done}">{{task.text}}</span>
+            <i 
+            class="fa-solid fa-trash"
+            @click.stop="remove(i)"
+            ></i>
 
           </li>
         </ul>

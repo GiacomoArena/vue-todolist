@@ -15,4 +15,22 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
 
 ## Procedimenti  
  - Creare la parte grafica utilizzando il css e mettere i vari elementi
+
  - impostare il messaggio nel caso in cui non ci siano task 
+
+ - creo in data l'array di oggetti tasks che poi sará ciclato sul tag li con un v-for e stampato in pagina per ogni task presente
+ ```
+ v-for="(task,i) in tasks"
+ ```
+
+ - creo una funzione che al click del cestino solo se la task é giá stata barrata mi rimuove la task e nel caso in cui deve ancora essere selezionata mi stampa in pagina un messaggio di avviso
+ ```
+ remove(i){
+        if (this.tasks[i].done) {
+          this.tasks.splice(i,1)
+          this.error = '';
+        }else{
+          this.error = "Puoi eliminare il task solo se é giá stato barrato"
+        }
+      }
+ ```

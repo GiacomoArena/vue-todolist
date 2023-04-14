@@ -15,7 +15,18 @@ createApp({
           done: false,
         }
       ],
+      error:'',
     }
     },
   
+    methods:{
+      remove(i){
+        if (this.tasks[i].done) {
+          this.tasks.splice(i,1)
+          this.error = '';
+        }else{
+          this.error = "Puoi eliminare il task solo se é giá stato barrato"
+        }
+      }
+    }
 }).mount('#app')
