@@ -27,14 +27,19 @@
       <!-- start input area -->
       <div class="input-area">
 
-        <input type="text" placeholder="Cose da fare ?">
+        <input 
+        v-model="newTask"
+        type="text" 
+        placeholder="Cose da fare ?"
+        >
 
-        <button class="button">Aggiungi</button>
-        
-        <span>{{error}}</span>
+        <button @click="add()" class="button">Aggiungi</button>
         
       </div>
 
+      <div class="error">
+        <span>{{error}}</span>
+      </div>
       <div class="task-container">
 
         <h3  class="empty-message" v-if="tasks.length === 0">

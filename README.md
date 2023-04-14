@@ -34,3 +34,20 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
         }
       }
  ```
+ - dentro input creo un v-model di "newTask" che inizialmente sará newTask: '  ',   per poi prendere il valore di ció che verrá scritto sul'input stesso,     al click del button aggiungi associo la funzione "add" che se la parola inserita é maggiore di 3 lettere mi pusha dentro 'tasks' un nuovo oggetto creato contenente come ''text'' il valore inserito tramite il v-model e come ''done'' false di default   
+ altrimenti error sará uguale ad un messaggio di avviso
+ ````
+ add(){
+        if (this.newTask.length >3) {
+          const taskAdded = {
+            text: this.newTask,
+            done: false,
+          };
+          this.tasks.push(taskAdded);
+          this.error = '';
+        }else{
+          this.error = "Scrivi qualcosa di senso compito"
+        }
+      }
+
+ ```

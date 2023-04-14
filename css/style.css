@@ -66,3 +66,9 @@ body{
 .done{
   text-decoration: line-through;
 }
+.error{
+  text-align: center;
+  color: red;
+  font-weight: 600;
+  margin-top: 20px;
+}
