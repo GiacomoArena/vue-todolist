@@ -6,14 +6,7 @@ createApp({
   data(){
     return{
       tasks:[
-        {
-          text: "andare a fare la spesa",
-          done: false,
-        },
-        {
-          text: "andare in palestra",
-          done: false,
-        },
+
       ],
       error:'',
       newTask: '',
@@ -38,6 +31,7 @@ createApp({
           };
           this.tasks.push(taskAdded);
           this.error = '';
+          this.newTask = '';
         }else{
           this.error = "Scrivi qualcosa di senso compito"
         }

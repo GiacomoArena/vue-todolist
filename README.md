@@ -23,7 +23,7 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
  v-for="(task,i) in tasks"
  ```
 
- - creo una funzione che al click del cestino solo se la task é giá stata barrata mi rimuove la task e nel caso in cui deve ancora essere selezionata mi stampa in pagina un messaggio di avviso
+ - Creo una funzione che al click del cestino solo se la task é giá stata barrata mi rimuove la task e nel caso in cui deve ancora essere selezionata mi stampa in pagina un messaggio di avviso
  ```
  remove(i){
         if (this.tasks[i].done) {
@@ -34,9 +34,10 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
         }
       }
  ```
- - dentro input creo un v-model di "newTask" che inizialmente sará newTask: '  ',   per poi prendere il valore di ció che verrá scritto sul'input stesso,     al click del button aggiungi associo la funzione "add" che se la parola inserita é maggiore di 3 lettere mi pusha dentro 'tasks' un nuovo oggetto creato contenente come ''text'' il valore inserito tramite il v-model e come ''done'' false di default   
+ - Dentro input creo un v-model di "newTask" che inizialmente sará newTask: '  ',   per poi prendere il valore di ció che verrá scritto sul'input stesso,     al click del button aggiungi associo la funzione "add" che se la parola inserita é maggiore di 3 lettere mi pusha dentro 'tasks' un nuovo oggetto creato contenente come ''text'' il valore inserito tramite il v-model e come ''done'' false di default   
  altrimenti error sará uguale ad un messaggio di avviso
- ````
+
+ ```
  add(){
         if (this.newTask.length >3) {
           const taskAdded = {
@@ -49,9 +50,12 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
           this.error = "Scrivi qualcosa di senso compito"
         }
       }
+ ```  
+ 
+
+- Aggiungo la funzione che al click del tasto ''enter'' sulla tastiera se ci si trova nell'area di input verrá aagiunto il testo ovvero la funzione add()  
 
  ```
- - aggiungo la funzione che al click del tasto ''enter'' sulla tastiera se ci si trova nell'area di input verrá aagiunto il testo ovvero la funzione add()
- ````
- @keyup.enter="add()"
+ @keyup.enter="add()"  
+
  ```
